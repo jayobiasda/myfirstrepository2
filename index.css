@@ -1,0 +1,54 @@
+/* Apply to body or any container */
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  color: white;
+
+  /* Gradient background */
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  overflow: hidden;
+}
+
+/* Floating circles animation */
+.background-shape {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.3;
+  animation: float 10s infinite ease-in-out;
+}
+
+.shape1 {
+  width: 150px;
+  height: 150px;
+  background: #ffffff;
+  top: 20%;
+  left: 10%;
+}
+
+.shape2 {
+  width: 200px;
+  height: 200px;
+  background: #ffdf6b;
+  top: 50%;
+  left: 70%;
+  animation-delay: 3s;
+}
+
+.shape3 {
+  width: 120px;
+  height: 120px;
+  background: #ff6b81;
+  top: 75%;
+  left: 30%;
+  animation-delay: 6s;
+}
+
+@keyframes float {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-30px); }
+  100% { transform: translateY(0px); }
+}
