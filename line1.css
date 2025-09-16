@@ -1,0 +1,108 @@
+body {
+            font-family: Arial, sans-serif;
+        }
+
+        .section {
+            border: 2px solid #005bbb;
+            padding: 20px;
+            margin: 20px;
+        }
+
+        .box {
+            border: 2px solid #005bbb;
+            display: inline-block;
+            margin: 10px;
+            width: 200px;
+            height: 120px;
+            vertical-align: top;
+        }
+
+        .all-padding {
+            padding: 25px;
+        }
+
+        h2 {
+            font-size: 24px;
+        }
+
+        h3 {
+            font-size: 20px;
+            margin-top: 0;
+        }
+
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .section {
+            border: 2px solid #005bbb;
+            padding: 20px;
+            margin: 20px;
+        }
+
+        .box {
+            border: 2px solid #005bbb;
+            display: inline-block;
+            margin: 10px;
+            width: 200px;
+            height: 120px;
+            vertical-align: top;
+        }
+
+        .top-right-padding {
+            padding-top: 10px;
+            padding-right: 10px;
+        }
+
+        .right-bottom-padding {
+            padding-right: 15px;
+            padding-bottom: 15px;
+        }
+
+        .bottom-left-padding {
+            padding-bottom: 25px;
+            padding-left: 25px;
+        }
+
+        h2 {
+            font-size: 24px;
+        }
+
+        h3 {
+            font-size: 20px;
+            margin-top: 0;
+        }
+
+
+         body {
+            font-family: Arial, sans-serif;
+        }
+
+        .section {
+            border: 2px solid #005bbb;
+            padding: 20px;
+            margin: 20px;
+        }
+
+        .box {
+            border: 2px solid #005bbb;
+            display: inline-block;
+            margin: 10px;
+            width: 200px;
+            height: 120px;
+            vertical-align: top;
+        }
+
+        .all-padding {
+            padding: 25px;
+        }
+
+        h2 {
+            font-size: 24px;
+        }
+
+        h3 {
+            font-size: 20px;
+            margin-top: 0;
+        }

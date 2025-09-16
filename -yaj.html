@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HTML Elements — 3 Divisions (Styled)</title>
+  <!-- W3.CSS -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-teal.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+  <style>
+    :root{--card-radius:14px}
+    body{font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif}
+    .pill{border-radius:999px}
+    .element-icon{width:44px;height:44px;line-height:44px;border-radius:50%;text-align:center;color:#fff;font-size:18px}
+    .card{border-radius:var(--card-radius)}
+    /* subtle hover lift */
+    .card:hover{transform:translateY(-6px);box-shadow:0 10px 24px rgba(0,0,0,.08);transition:all .22s ease}
+    /* responsive spacing */
+    @media (max-width:600px){.w3-third{width:100%!important;display:block}}
+  </style>
+</head>
+<body class="w3-theme-l5">
+
+  <header class="w3-container w3-theme w3-center w3-padding-32 w3-card-4">
+    <h1 class="w3-xxlarge"><i class="fa-solid fa-code w3-margin-right"></i>HTML Elements — Three Divisions</h1>
+    <p class="w3-opacity">Grouped into <strong>Text</strong>, <strong>Media</strong>, and <strong>Form</strong> elements for quick reference</p>
+  </header>
+
+  <main class="w3-content w3-padding-32" style="max-width:1100px">
+
+    <div class="w3-row-padding">
+
+      <!-- Text Elements -->
+      <div class="w3-third">
+        <div class="w3-card w3-white w3-round-large w3-padding card">
+          <div class="w3-container w3-padding-small">
+            <h3 class="w3-margin-0"><i class="fa-solid fa-font w3-margin-right"></i>Text Elements</h3>
+            <p class="w3-small w3-text-grey">Structure and typographic building blocks</p>
+          </div>
+          <ul class="w3-ul w3-hoverable w3-margin-top">
+            <li class="w3-bar">
+              <div class="w3-bar-item element-icon w3-red"><i class="fa-solid fa-heading"></i></div>
+              <div class="w3-bar-item">
+                <span class="w3-large">Headings (&lt;h1&gt;–&lt;h6&gt;)</span><br>
+                <span class="w3-small w3-text-grey">Document titles and subsections</span>
+              </div>
+              <span class="w3-badge w3-theme pill w3-right">semantics</span>
+            </li>
+
+            <li class="w3-bar">
+              <div class="w3-bar-item element-icon w3-blue"><i class="fa-solid fa-paragraph"></i></div>
+              <div class="w3-bar-item">
+                <span class="w3-large">Paragraph (&lt;p&gt;)</span><br>
+                <span class="w3-small w3-text-grey">Standard text block</span>
+              </div>
+              <span class="w3-badge w3-light-grey pill w3-right">content</span>
+            </li>
+
+            <li class="w3-bar">
+              <div class="w3-bar-item element-icon w3-indigo"><i class="fa-solid fa-quote-left"></i></div>
+              <div class="w3-bar-item">
+                <span class="w3-large">Blockquote (&lt;blockquote&gt;)</span><br>
+                <span class="w3-small w3-text-grey">Quoted sections from other sources</span>
+              </div>
+              <span class="w3-badge w3-indigo pill w3-right">citation</span>
+            </li>
+
+            <li class="w3-bar">
+              <div class="w3-bar-item element-icon w3-teal"><i class="fa-solid fa-code"></i></div>
+              <div class="w3-bar-item">
+                <span class="w3-large">Inline code (&lt;code&gt;, &lt;kbd&gt;)</span><br>
+                <span class="w3-small w3-text-grey">Mark shorter code or keyboard input</span>
+              </div>
+              <span class="w3-badge w3-teal pill w3-right">inline</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Media Elements -->
+      <div class="w3-third">
+        <div class="w3-card w3-white w3-round-large w3-padding card">
+          <div class="w3-container w3-padding-small">
+            <h3 class="w3-margin-0"><i class="fa-solid fa-photo-film w3-margin-right"></i>Media Elements</h3>
+            <p class="w3-small w3-text-grey">Images, audio, video and embedded content</p>
+          </div>
+          <ul class="w3-ul w3-hoverable w3-margin-top">
+            <li class="w3-bar">
+              <div class="w3-bar-item element-icon w3-orange"><i class="fa-regular fa-image"></i></div>
+              <div class="w3-bar-item">
+                <span class="w3-large">Image (&lt;img&gt;)</span><br>
+                <span class="w3-small w3-text-grey">Add pictures with alt text for accessibility</span>
+              </div>
+              <span class="w3-badge w3-orange pill w3-right">visual</span>
+            </li>
+
+            <li class="w3-bar">
+              <div class="w3-bar-item element-icon w3-deep-orange"><i class="fa-solid fa-video"></i></div>
+              <div class="w3-bar-item">
+                <span class="w3-large">Video (&lt;video&gt;)</span><br>
+                <span class="w3-small w3-text-grey">Native playback with controls and sources</span>
+              </div>
+              <span class="w3-badge w3-deep-orange pill w3-right">interactive</span>
+            </li>
+
+            <li class="w3-bar">
+              <div class="w3-bar-item element-icon w3-purple"><i class="fa-solid fa-music"></i></div>
+              <div class="w3-bar-item">
+                <span class="w3-large">Audio (&lt;audio&gt;)</span><br>
+                <span class="w3-small w3-text-grey">Embed sound clips and music; support fallbacks</span>
+              </div>
+              <span class="w3-badge w3-purple pill w3-right">audio</span>
+            </li>
+
+            <li class="w3-bar">
+              <div class="w3-bar-item element-icon w3-black"><i class="fa-brands fa-youtube"></i></div>
+              <div class="w3-bar-item">
+                <span class="w3-large">Embeds (&lt;iframe&gt;, &lt;embed&gt;)</span><br>
+                <span class="w3-small w3-text-grey">Third‑party widgets, maps, or media players</span>
+              </div>
+              <span class="w3-badge w3-black pill w3-right">external</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Form Elements -->
+      <div class="w3-third">
+        <div class="w3-card w3-white w3-round-large w3-padding card">
+          <div class="w3-container w3-padding-small">
+            <h3 class="w3-margin-0"><i class="fa-solid fa-list-check w3-margin-right"></i>Form Elements</h3>
+            <p class="w3-small w3-text-grey">Inputs and controls for user interaction</p>
+          </div>
+          <ul class="w3-ul w3-hoverable w3-margin-top">
+            <li class="w3-bar">
+              <div class="w3-bar-item element-icon w3-green"><i class="fa-solid fa-square-check"></i></div>
+              <div class="w3-bar-item">
+                <span class="w3-large">Input (&lt;input&gt;)</span><br>
+                <span class="w3-small w3-text-grey">Text, email, password, number and more types</span>
+              </div>
+              <span class="w3-badge w3-green pill w3-right">controls</span>
+            </li>
+
+            <li class="w3-bar">
+              <div class="w3-bar-item element-icon w3-blue"><i class="fa-solid fa-square-list"></i></div>
+              <div class="w3-bar-item">
+                <span class="w3-large">Select (&lt;select&gt;)</span><br>
+                <span class="w3-small w3-text-grey">Dropdown choices and option groups</span>
+              </div>
+              <span class="w3-badge w3-blue pill w3-right">choices</span>
+            </li>
+
+            <li class="w3-bar">
+              <div class="w3-bar-item element-icon w3-indigo"><i class="fa-regular fa-square"></i></div>
+              <div class="w3-bar-item">
+                <span class="w3-large">Buttons (&lt;button&gt;)</span><br>
+                <span class="w3-small w3-text-grey">Actions, submit, reset, and custom handlers</span>
+              </div>
+              <span class="w3-badge w3-indigo pill w3-right">actions</span>
+            </li>
+
+            <li class="w3-bar">
+              <div class="w3-bar-item element-icon w3-teal"><i class="fa-solid fa-keyboard"></i></div>
+              <div class="w3-bar-item">
+                <span class="w3-large">Textarea (&lt;textarea&gt;)</span><br>
+                <span class="w3-small w3-text-grey">Multi‑line input for long text</span>
+              </div>
+              <span class="w3-badge w3-teal pill w3-right">input</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer class="w3-center w3-small w3-padding-32 w3-text-grey">
+    Designed with <a href="https://www.w3schools.com/w3css/" class="w3-text-theme" target="_blank">W3.CSS</a>. Want a downloadable version or a dark mode? Tell me which and I'll add it.
+  </footer>
+
+</body>
+</html>

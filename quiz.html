@@ -1,127 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Styled Table</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', sans-serif;
-            background: linear-gradient(135deg, #6dd5ed, #2193b0);
-            margin: 0;
-            padding: 40px;
-            color: #333;
-        }
-        table {
-            border-collapse: collapse;
-            margin: auto;
-            width: 80%;
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 25px rgba(0, 0, 0, 0.2);
-            animation: fadeIn 1s ease-in-out;
-        }
-        th, td {
-            padding: 14px 20px;
-            text-align: center;
-        }
-        th {
-            background: #4CAF50;
-            color: white;
-            font-size: 15px;
-            letter-spacing: 1px;
-        }
-        tr:nth-child(even) {
-            background: #f4f6f8;
-        }
-      
-        caption {
-            caption-side: top;
-            margin-bottom: 10px;
-            font-size: 22px;
-            font-weight: bold;
-            color: white;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>quiz</title>
+  <link rel="stylesheet" href="quiz.css">
 </head>
 <body>
+<hr color="blue" size="5">
+  <!-- Header -->
+  <div class="header">
+    <h1>This is a header div that uses h1 element</h1>
+  </div>
 
-    <table>
-        <caption>table activity</caption>
-        <tr>
-            <th>SCHEDULE</th>
-            <th>MONDAY</th>
-            <th>TUESDAY</th>
-            <th>WEDNESDAY</th>
-            <th>THURSDAY</th>
-            <th>FRIDAY</th>
-        </tr>
-        <tr>
-            <td>7:00-8:00</td>
-            <td>homeroom</td>
-            <td>empowerment technology</td>
-            <td>empowerment technology</td>
-            <td>empowerment technology</td>
-            <td>empowerment technology</td>
-        </tr>
-        <tr>
-            <td>8:00-9:00</td>
-            <td rowspan="2">Oral Communication</td>
-            <td>Gen math</td>
-            <td>GEN math</td>
-            <td>Gen math</td>
-            <td>Gen math</td>
-        </tr>
-        <tr>
-            <td>9:00-10:00</td>
-            <td>Oral communication</td>
-            <td>Oral communication</td>
-            <td>PE</td>
-            <td>UCSP</td>
-        </tr>
-         <tr>
-            <td>10:00-10:20</td>
-            <td colspan="5">break</td>
-            
-        </tr>
-         <tr>
-            <td>10:20-11:20</td>
-            <td>UCSP</td>
-            <td>UCSP</td>
-            <td>UCSP</td>
-            <td>per dev</td>
-            <td>kumunikasyon</td>
-        </tr>
-        <tr>
-            <td>11:00-12:20</td>
-            <td>per dev</td>
-            <td>kumunikasyon</td>
-            <td>kumunikasyon</td>
-            <td>kumunikasyon</td>
-            <td>per dev</td>
-        </tr>
-        <tr>
-            <td>12:20-12:30</td>
-            <td colspan="5">BREAK</td>
-            
-        </tr>
-         <tr>
-            <td>12:30-1:30</td>
-            <td rowspan="2">Net MVC</td>
-            <td rowspan="2">Net MVC</td>
-            <td rowspan="2">Net MVC</td>
-            <td rowspan="2">Net MVC</td>
-            <td>per dev</td>
-        </tr>
-          <tr>
-            <td>1:30-2:30</td>
-            <td >free</td>
-           
-        </tr>
-    </table>
+  <!-- Article -->
+  <div class="article">
+    <h2>Article Title</h2>
+    <p>This is the main article content.</p>
+  </div>
 
-</body>
-</html>
+  <!-- Images -->
+  <div class="images">
+    <div class="image-bax">Image 1</div>
+    <div class="image-bex">Image 2</div>
+    <div class="image-bix">image 3</div>

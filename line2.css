@@ -1,0 +1,80 @@
+ body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Header */
+    .header {
+      background-color: #6441e185;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+
+
+    .sidebar a:hover {
+      background-color: #4682B4;
+    }
+
+    /* Content */
+    .content {
+      margin-left: 20px;
+      padding: 20px;
+    }
+
+    .border-box {
+      border: 2px solid rgba(186, 47, 214, 0.856);
+      border-radius: 10px;
+      padding: 15px;
+    }
+
+    p {
+      margin: 10px 0;
+    }
+p.dotted {border-style: dotted;}
+p.dashed {border-style: dashed;}
+p.solid {border-style: solid;}
+p.double {border-style: double;}
+p.groove {border-style: groove;}
+p.ridge {border-style: ridge;}
+p.inset {border-style: inset;}
+p.outset {border-style: outset;}
+p.none {border-style: none;}
+p.hidden {border-style: hidden;}
+p.mix {border-style: dotted dashed solid double;}
+.border1 {
+      border: 2px solid black;
+      margin: 10px;
+      padding: 10px;
+    }
+
+    .border2 {
+      border: 15px groove gray;
+      margin: 10px;
+      padding: 10px;
+    }
+
+    .border3 {
+      border: 35px ridge silver;
+      margin: 10px;
+      padding: 10px;
+    }
+
+    .border4 {
+      border: thin ridge gray;
+      margin: 10px;
+      padding: 10px;
+    }
+
+    .border5 {
+      border: medium inset lightgray;
+      margin: 10px;
+      padding: 10px;
+    }
+
+    .border6 {
+      border: thick outset darkgray;
+      margin: 10px;
+      padding: 10px;
+    }
