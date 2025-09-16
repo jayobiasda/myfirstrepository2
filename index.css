@@ -6,31 +6,16 @@ body {
   align-items: center;
   font-family: Arial, sans-serif;
   color: white;
-  overflow: hidden;
+  text-align: center;
 
-  /* Gradient base */
-  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  /* Animated RGB gradient */
+  background: linear-gradient(270deg, red, green, blue);
+  background-size: 600% 600%;
+  animation: rgbAnimation 10s ease infinite;
 }
 
-/* Moving diagonal stripes */
-body::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 200%;
-  height: 200%;
-  background-image: repeating-linear-gradient(
-    45deg,
-    rgba(255, 255, 255, 0.1) 0px,
-    rgba(255, 255, 255, 0.1) 40px,
-    transparent 40px,
-    transparent 80px
-  );
-  animation: moveStripes 10s linear infinite;
-}
-
-@keyframes moveStripes {
-  from { transform: translateX(0) translateY(0); }
-  to   { transform: translateX(-160px) translateY(-160px); }
+@keyframes rgbAnimation {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
