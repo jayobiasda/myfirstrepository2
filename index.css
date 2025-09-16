@@ -8,13 +8,13 @@ body {
   color: white;
   text-align: center;
 
-  /* Animated RGB gradient */
-  background: linear-gradient(270deg, red, green, blue);
-  background-size: 600% 600%;
-  animation: rgbAnimation 10s ease infinite;
+  /* Gradient with your colors */
+  background: linear-gradient(-45deg, lightblue, violet, black);
+  background-size: 400% 400%;
+  animation: gradientFlow 12s ease infinite;
 }
 
-@keyframes rgbAnimation {
+@keyframes gradientFlow {
   0%   { background-position: 0% 50%; }
   50%  { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
