@@ -11,7 +11,7 @@
     .row{display:flex; gap:40px; align-items:flex-start}
 
     .grid{
-      width:var(--box-size);
+      width: 100px;;
       height:var(--box-size);
       display:grid;
       grid-template-columns:repeat(3,1fr);
