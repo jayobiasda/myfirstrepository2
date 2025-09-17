@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Class vs ID Example</title>
+  <style>
+    /* CLASS: can be reused on many elements */
+    .highlight {
+      color: white;
+      background-color: blue;
+      padding: 5px;
+      border-radius: 5px;
+    }
+
+    /* ID: must be unique, only one element should use it */
+    #special {
+      color: yellow;
+      background-color: red;
+      font-weight: bold;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1 class="highlight">This is using a CLASS</h1>
+  <p class="highlight">This paragraph also uses the SAME class.</p>
+  
+  <h2 id="special">This is using an ID (unique)</h2>
+</body>
+</html>
