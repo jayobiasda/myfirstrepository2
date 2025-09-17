@@ -39,3 +39,11 @@
     .nav-links li a:hover {
       background: #34495e;
     }
+       h1 {
+      font-size: 48px;
+      opacity: 0;
+      transform: translateX(-100%); /* start from left */
+      animation: slideIn 2s ease forwards;
+    }
+
+    
