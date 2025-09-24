@@ -45,5 +45,6 @@
       transform: translateX(-100%); /* start from left */
       animation: slideIn 2s ease forwards;
     }
+    
 
     
