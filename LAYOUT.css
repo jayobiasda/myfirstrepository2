@@ -9,10 +9,10 @@ body {
 
 /* Style the header */
 header {
-  background-color: #ce4141;
+  background-color: #161179;
   padding: 30px;
   text-align: center;
-  font-size: 35px;
+  font-size: 45px;
   color: white;
   height: auto;
 }
@@ -22,7 +22,7 @@ nav {
   float: left;
   width: 30%;
   height: 600px; /* only for demonstration, should be removed */
-  background: #95c720;
+  background: #9c9ca3;
  
 }
 /* Style the list inside the menu */
@@ -33,15 +33,27 @@ nav ul {
 article {
   float: left;
   padding: 20px;
-  width: 70%;
+  width: 60%;
   background-color: #fffefe;
-  height: 600px; /* only for demonstration, should be removed */
+  height: 60px; /* only for demonstration, should be removed */
 }
-a {
-    font-size: 100px;
+
+ul li a.active {
+  background-color: #04AA6D;
+}
+ul li a:hover:not(.active) {
+  background-color: #111111;
+}
+  
+
+
+a  {text-decoration: none;
+  display: block;
+  color: black;
+  padding: 8px 16px;
 }
 li:hover {
-    background-color: black;
+    background-color: rgb(21, 204, 119);
     
 }
 
@@ -54,7 +66,7 @@ section::after {
 
 /* Style the footer */
 footer {
-  background-color: #bd2222;
+  background-color: #161179;
   padding: 30px;
   text-align: center;
   color: rgb(188, 224, 28);
