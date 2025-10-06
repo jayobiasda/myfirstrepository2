@@ -1,0 +1,17 @@
+.light{
+    margin: 20px;
+    position: absolute;
+    padding: 20px;
+    height: 200px;
+    width: 200px;
+    background-color: blue;
+    color: aliceblue;
+    position: fixed;
+    right: 0;
+    
+}
+
+.container{
+
+
+}
