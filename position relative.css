@@ -1,17 +1,44 @@
-.light{
-    margin: 20px;
-    position: absolute;
-    padding: 20px;
-    height: 200px;
-    width: 200px;
-    background-color: blue;
-    color: aliceblue;
-    position: fixed;
-    right: 0;
-    
+.boxx {
+    border: 2px solid black;
+    height: 350px;
+    width: 350px;
 }
 
-.container{
+.box {
+    border: 2px solid black;
+    height: 200px;
+    width: 200px;
+    position:absolute;
+    top: 50px;
 
+}
+.blox{
+    border: 2px solid black;
+    height: 350px;
+    width: 350px;
+}
 
+.bux{
+   border: 2px solid black;
+    height: 200px;
+    width: 200px;
+    position:absolute;
+    left: 158px;
+    top: -1;
+
+}
+.PO{
+    border: 2px solid black;
+    height: 350px;
+    width: 350px;
+
+}
+
+.PO{
+      border: 2px solid black;
+    height: 200px;
+    width: 200px;
+    position:absolute;
+    left: 158px;
+    bottom: -100px;
 }
