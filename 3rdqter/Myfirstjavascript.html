@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my first java script</title>
+    
+   
+   <script>//jAavascript on the head of the html
+   function changep2() {
+    document.getElementById('p2').innerHTML='bleeeeeee'
+   }
+
+   </script>
+</head>
+<body>
+    <h1>My First javascript web page</h1>
+    <h4>this part is controlled by a javascript in the body of the html.</h4>
+    <p id="p1">this paragaraph will be change by the button bellow.</p>
+    
+<button type="button " onclick=changep1()>click</button> 
+<hr>
+<p id="p2">this paragaraph will be change by the button bellow.</p>
+<button type="button " onclick=changep2()>click</button>
+<hr>
+<p id="p3">this paragaraph will be change by the button bellow.</p>
+<button type="button " onclick=changep1()>click</button>
+<hr>
+
+<h4>this part will use the window alert output of a javascript</h4>
+<button type="button" onclick="alert1()"> click here</button>
+<button type="button" onclick="alert2()"> click here</button>
+<button type="button" onclick="alert3()"> click here</button>
+
+<h4>this part will use the console output of a javascript</h4>
+<button type="button" onclick="console1()"> click here</button>
+<button type="button" onclick="console2()"> click here</button>
+<button type="button" onclick="console3()"> click here</button>
+    <script>//javascript on the body of the html
+
+
+    function changep1(){ 
+        document.getElementById('p1').innerHTML='ulol'
+
+    }
+    function alert(){
+        window .alert("this is aleert 1 from javascript in the body of html!");
+    }
+    function console() {
+        console.log("this is console 1 from ")
+    }
+
+    </script>
+
+</body>
+</html>

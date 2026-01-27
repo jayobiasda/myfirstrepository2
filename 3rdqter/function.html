@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>calculator</h2>
+    <hr>
+
+    <h4>addition</h4>
+    <div>
+        
+    </div>
+    <p id="add"></p>
+    <hr>
+
+     <h4>subtractions</h4>
+     <div>
+        
+     </div>
+    <p id="sub"></p>
+     <hr>
+     <h4>division</h4>
+    <p id="div"></p>
+    <hr>
+
+     <h4>multiplication</h4>
+    <p id="mul"></p>
+    <script>
+            // calculator functions
+            const add = (a, b) => a + b;
+            const sub = (a, b) => a - b;
+            const mul = (a, b) => a * b;
+            const div = (a, b) => (b === 0 ? 'Error: divide by zero' : a / b);
+
+            // example values (change as needed)
+            const a = 10;
+            const b = 5;
+
+            // show results
+            document.getElementById('add').textContent = `${a} + ${b} = ${add(a, b)}`;
+            document.getElementById('sub').textContent = `${a} - ${b} = ${sub(a, b)}`;
+            document.getElementById('mul').textContent = `${a} × ${b} = ${mul(a, b)}`;
+            document.getElementById('div').textContent = `${a} ÷ ${b} = ${div(a, b)}`;
+
+    </script>
+</body>
+</html>

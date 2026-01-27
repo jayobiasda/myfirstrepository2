@@ -1,0 +1,59 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(45deg, #000000, #5db0da);
+    color: white;
+}
+ 
+.example { 
+    border: 1px solid #ddd; 
+    padding: 1rem; 
+    margin: 1rem 0; 
+    border-radius: 6px; 
+}
+
+label, button { 
+    display: block; 
+    margin-top: 0.5rem; 
+    
+}
+
+.result { 
+    margin-top: 0.5rem; 
+    font-weight: bold; 
+}
+
+.example1 {
+     background: linear-gradient(45deg, #ffffff, #105b94); /*etong kulay lang para sa lahat ng div*/
+    padding: 15px;
+    border-radius: 50px;
+    width: 75%;
+    margin: 0 auto;
+    margin-top: 2%;
+}
+
+.example2{
+     background: linear-gradient(45deg, #ffffff, #105b94);
+     padding: 15px ;
+     border-radius: 30px;
+     width: 75%;
+     margin: 0 auto;
+     margin-top: 2%;
+}
+
+.example3{
+     background: linear-gradient(45deg, #ffffff, #105b94);
+     padding: 15px;
+     border-radius: 30px;
+     width: 75%;
+     margin: 0 auto;
+     margin-top: 2%;
+}
+
+.example4 {
+   background: linear-gradient(45deg, #ffffff, #105b94);
+    border-radius:30px ;
+    width: 75%;
+    margin: 0 auto;
+    margin-top: 2%;
+}

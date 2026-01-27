@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     function Car(brand, speed, fuel ){
+        this.brand = "unknown";
+        this.speed = 0;
+        this.fuel = 100;
+     }
+
+     const car1 = new Car("toyota",120,80);
+     const car2 = new Car("honda",100,60);
+
+     console.log("car1:", car1);
+     console.log("car2:", car2);
+
+     car1.speed = 100;
+     car2.fuel = 40;
+
+     console.log("car1 speed:", car1.speed);
+     console.log("car2 fuel:", car2.fuel );
+
+     car1.color = "red";
+     console.log("car1 color:", car1.color);
+
+     delete car2.speed;
+     console.log("car2 after deleting speed:",car2);
+    </script>
+</body>
+</html>

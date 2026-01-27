@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 50px;
+     background: radial-gradient(circle, #ff9a3c, #d92027, #2b0000);
+  color: rgb(57, 38, 221);
+}
+.game-container {
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid #000;
+}
+.player-container {
+    border: 1px solid #000;
+    padding: 10px;
+    width: 40%;
+    background: #f9f9f9;
+    display: inline-block;
+}
+#game-log {
+    border: 1px solid #000;
+    padding: 10px;
+    height: 200px;
+    overflow-y: auto;
+    background: #f9f9f9;
+    margin-top: 20px;
+}
+
+button, input, select {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+.health-bar {
+    width: 100%;
+    height: 20px;
+    background: red;
+    margin: 10px 0;
+}
+.health-bar-inner {
+    height: 100%;
+    background: green;
+    width: 100%;
+}
+
+/* Weapon selector styles */
+.weapon-selector {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-top: 10px;
+}
+.weapon-btn {
+    font-size: 24px;
+    border: 2px solid transparent;
+    background: transparent;
+    padding: 6px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.weapon-btn.selected {
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0,123,255,0.15);
+}
+.visually-hidden {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;   
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap;
+}
+
+/* Attack button image styles */
+.attack-btn {
+    border: none;
+    background: transparent;
+    padding: 6px;
+}
+.attack-btn img {
+    width: 48px;
+    height: 48px;
+    display: block;
+}
+.attack-btn:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+
+function selectWeapon(player, weapon, imgElem) { var inputId = 'player' + player + '-weapon'; var hidden = document.getElementById(inputId); if (!hidden) return; hidden.value = weapon; // highlight selection var container = document.getElementById('player' + player + '-weapon-choices'); if (!container) return; var imgs = container.getElementsByClassName('weapon-img'); for (var i = 0; i < imgs.length; i++) { imgs[i].classList.remove('weapon-selected'); } imgElem.classList.add('weapon-selected'); messageLog(Player ${player} selected ${weapon} as their weapon.); }
+
+
+

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+      function hero(health, mana , stamina){
+        this.health = 100;
+        this.mana = 50;
+        this.stamina = 75;
+      }
+
+      function Weapon (damage,durability){
+      this.damage = 25;
+      this.durability = 100;
+      }
+        const lapulapu = new hero();
+        const  paquito = new hero();
+        console.log ("lapulapu",lapulapu)
+        console.log("paquito",paquito)
+
+        lapulapu.health = 50;
+        paquito.health = 10;
+        console.log("lapulapu health:",lapulapu.health);
+        console.log("paquito health:", paquito.health);
+        lapulapu.armor = 15;
+        console.log("lapulapu armor:", lapulapu.armor);
+        paquito.range = 5;
+        console.log("paquito range:", paquito.range);
+        delete lapulapu.stamina;
+        console.log("");
+        
+        const espada = new Weapon(40,100);
+        const bow = new Weapon(10,100);
+
+        lapulapu.weapon = espada;
+        paquito.weapon = bow;
+        lapulapu.weapon.damage = 40;
+        paquito.weapon.damage = 10;
+        console.log("lapulapu weapon:",lapulapu);
+        console.log("paquito weapon:",paquito);
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, 
+    initial-scale=1.0">
+    <title>Text Base Game</title>
+    <link rel="stylesheet" href="mobilegeng.css">
+</head>
+<body>
+    <h1>Two-Player Text-Based Battle Game</h1>
+    <div id="player-input">
+        <input type="text" id="player1-name" placeholder=
+        "Enter Player 1 name" oninput="validateNames()">
+        <input type="text" id="player2-name" placeholder=
+        "Enter Player 2 name" oninput="validateNames()"><br>
+        <button id="start-game" onclick="startBattle()" 
+        disabled>Start Game</button>
+    </div> <br>
+    <div id="game-container">
+        <div class="player-container" id="player1">
+            <h2 id="player1-title">Player 1</h2>
+            <h3 id="player1-health">Health: 100</h3>
+            <div class="health-bar"><div id="player1-health-bar" 
+                class="health-bar-inner"></div></div>
+            <h3>Wins: <span id="player1-wins">0</span></h3>
+
+
+            <div class="weapon-selector" id="player1-weapon" data-weapon="Sword" aria-label="Player 1 weapon">
+                <button type="button" class="weapon-btn selected" data-weapon="Sword" title="Sword">⚔️<span class="visually-hidden">Sword</span></button>
+                <button type="button" class="weapon-btn" data-weapon="Axe" title="Axe">🪓<span class="visually-hidden">Axe</span></button>
+                <button type="button" class="weapon-btn" data-weapon="Bow" title="Bow">🏹<span class="visually-hidden">Bow</span></button>
+            </div>
+            <button id="player1-attack" class="attack-btn" 
+            onclick="playerAttack(1)" disabled>
+                <img src="images/attack1.svg" alt="Attack" />
+            </button>
+        </div>
+        <div class="player-container" id="player2">
+            <h2 id="player2-title">Player 2</h2>
+            <h3 id="player2-health">Health: 100</h3>
+            <div class="health-bar"><div id="player2-health-bar" 
+                class="health-bar-inner"></div></div>
+            <h3>Wins: <span id="player2-wins">0</span></h3>
+            <div class="weapon-selector" id="player2-weapon" data-weapon="Sword" aria-label="Player 2 weapon">
+                <button type="button" class="weapon-btn selected" data-weapon="Sword" title="Sword">⚔️<span class="visually-hidden">Sword</span></button>
+                <button type="button" class="weapon-btn" data-weapon="Axe" title="Axe">🪓<span class="visually-hidden">Axe</span></button>
+                <button type="button" class="weapon-btn" data-weapon="Bow" title="Bow">🏹<span class="visually-hidden">Bow</span></button>
+            </div>
+            <button id="player2-attack" class="attack-btn" onclick="playerAttack(2)" 
+            disabled>
+                <img src="images/attack2.svg" alt="Attack" />
+            </button>
+        </div>
+    </div>
+    <div id="game-log"><h3>Game Log</h3></div>
+    <script>
+    // Weapon selector: toggle selected class and keep a .value for compatibility
+    document.querySelectorAll('.weapon-selector').forEach(function(selector){
+        selector.addEventListener('click', function(e){
+            const btn = e.target.closest('.weapon-btn');
+            if(!btn) return;
+            selector.querySelectorAll('.weapon-btn').forEach(b=>b.classList.remove('selected'));
+            btn.classList.add('selected');
+            selector.dataset.weapon = btn.dataset.weapon;
+            selector.value = btn.dataset.weapon; // for scripts that read .value
+        });
+        // initialize value from selected button or dataset
+        const selected = selector.querySelector('.weapon-btn.selected') || selector.querySelector('.weapon-btn');
+        const val = selected ? selected.dataset.weapon : selector.dataset.weapon || '';
+        selector.dataset.weapon = val;
+        selector.value = val;
+    });
+
+    // Helper to get weapon for existing game functions
+    function getWeaponFor(playerId){
+        const el = document.getElementById('player'+playerId+'-weapon');
+        return el ? el.value || el.dataset.weapon : null;
+    }
+
+    // Expose for console/testing
+    window.getWeaponFor = getWeaponFor;
+
+    // --- Game logic: validate, start, and attack ---
+    const players = {
+        1: { health: 100, wins: 0 },
+        2: { health: 100, wins: 0 }
+    };
+
+    function validateNames(){
+        const p1 = document.getElementById('player1-name').value.trim();
+        const p2 = document.getElementById('player2-name').value.trim();
+        document.getElementById('start-game').disabled = !(p1 && p2);
+    }
+
+    function startBattle(){
+        const p1name = document.getElementById('player1-name').value.trim() || 'Player 1';
+        const p2name = document.getElementById('player2-name').value.trim() || 'Player 2';
+        document.getElementById('player1-title').textContent = p1name;
+        document.getElementById('player2-title').textContent = p2name;
+
+        players[1].health = 100;
+        players[2].health = 100;
+        updateHealthUI(1);
+        updateHealthUI(2);
+
+        document.getElementById('player1-attack').disabled = false;
+        document.getElementById('player2-attack').disabled = false;
+
+        document.getElementById('start-game').disabled = true;
+        document.getElementById('player1-name').disabled = true;
+        document.getElementById('player2-name').disabled = true;
+
+        const logEl = document.getElementById('game-log');
+        logEl.innerHTML = '<h3>Game Log</h3>';
+        log(`${p1name} vs ${p2name} — Battle started.`);
+    }
+
+    function playerAttack(playerId){
+        const opponent = 3 - playerId;
+        if(players[playerId].health <= 0 || players[opponent].health <= 0) return;
+
+        const weapon = (getWeaponFor(playerId) || 'Sword');
+        let dmg;
+        if(weapon === 'Sword') dmg = randomInt(10,20);
+        else if(weapon === 'Axe') dmg = randomInt(15,25);
+        else if(weapon === 'Bow') dmg = randomInt(8,16);
+        else dmg = randomInt(8,20);
+
+        players[opponent].health = Math.max(0, players[opponent].health - dmg);
+        updateHealthUI(opponent);
+
+        const attackerName = document.getElementById('player'+playerId+'-title').textContent;
+        const opponentName = document.getElementById('player'+opponent+'-title').textContent;
+        log(`${attackerName} attacks ${opponentName} with ${weapon} for ${dmg} damage.`);
+
+        if(players[opponent].health <= 0){
+            players[playerId].wins += 1;
+            document.getElementById('player'+playerId+'-wins').textContent = players[playerId].wins;
+            log(`${attackerName} wins the round!`);
+            document.getElementById('player1-attack').disabled = true;
+            document.getElementById('player2-attack').disabled = true;
+            document.getElementById('start-game').disabled = false;
+            document.getElementById('player1-name').disabled = false;
+            document.getElementById('player2-name').disabled = false;
+        }
+    }
+
+    function updateHealthUI(playerId){
+        const hp = players[playerId].health;
+        const healthEl = document.getElementById('player'+playerId+'-health');
+        const bar = document.getElementById('player'+playerId+'-health-bar');
+        healthEl.textContent = 'Health: ' + hp;
+        bar.style.width = hp + '%';
+        if(hp > 50) bar.style.background = 'green';
+        else if(hp > 20) bar.style.background = 'orange';
+        else bar.style.background = 'red';
+    }
+
+    function log(text){
+        const logEl = document.getElementById('game-log');
+        const p = document.createElement('p');
+        p.textContent = text;
+        logEl.appendChild(p);
+        logEl.scrollTop = logEl.scrollHeight;
+    }
+
+    function randomInt(min,max){
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    // Expose for debugging
+    window.startBattle = startBattle;
+    window.playerAttack = playerAttack;
+    window.validateNames = validateNames;
+
+    // Initialize when DOM is ready
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', validateNames);
+    } else {
+        validateNames();
+    }
+
+    </script>
+</body>
+</html>
